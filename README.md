@@ -1,32 +1,33 @@
-# HTML projecten
+# P5JS projecten
 Deze repository bevat een configuratie voor de Codespaces ontwikkelomgeving.
 
-Leerlingen kunnen hiermee de HTML projecten uit Informatica-Actief maken.
+Hiermee kan je de opdrachten van "Games maken en ervaren met JavaScript" maken.
 
 De configuratie ondersteunt:
 - HTML, CSS en JavaScript
 - Webserver voor statische bestanden
 
-## Kopieer projectcode
-- De projectcode van je docent staat op een plek waar jij het niet kunt wijzigen.
-- Voordat je aan de slag gaat kopieer je de projectcode naar een plek waar je die kunt wijzigen.
-- Je docent vertelt hoe je dit kunt doen.
+## Starten
 
-Opties voor de docent:
-- Optie 1: voor incidenteel gebruik (zonder GitHub Classroom)
-  - Een leerling drukt op "Use this template"->"Create a new repository" en slaat de projectcode (repository) op onder zijn eigen account.
-  - Deze leerling voegt onder Settings van de repository de andere leerling en de docent toe als collaborator.
-- Optie 2: voor structureel gebruik (met GitHub Classroom)
-  - De docent gebruikt GitHub Classroom om een opdracht aan te maken en deelt een inschrijf-link met leerlingen.
-  - Leerlingen gebruiken de inschrijf-link naar GitHub Classroom om een repository voor hun groepje aan te maken. Deze repositories worden geplaatst in een door de docent beheerde GitHub-organisatie.
+Volg deze stappen om aan de slag te gaan.
 
-## Start Codespaces
+### 0. Je eigen kopie maken
+
+Dit hoeft maar 1 leerling per groepje te doen.
+
+1. Druk rechtsboven op "Use this template" -> "Create a new repository"
+2. Kies een naam die duidelijk maakt wat je project is en sla op.
+3. Ga naar settings -> collaborators
+4. Voeg apdekker93 toe.
+5. Voeg andere leerlingen toe waarmee je samenwerkt.
+
+### 1. Start Codespaces
 - Login op https://github.com/
 - Ga naar de pagina met jouw projectcode
 - Klik op de groene knop "Code" en dan op de tab "Codespace" en dan op de groen knop "Create codespace on main". Als je de knop "Create Codespace on main" niet ziet, dan heb je eerder een Codespace gemaakt. Deze zie je op de plek van de knop staan en daar kun je op klikken om hem opnieuw te starten.
-- Het starten van de Codespace kan enkele minuten duren. Als de Codespace gestart is, dan zie je de webversie van de editor VS Code (spreek uit als: vie-es-koot).
+- Het starten van de Codespace kan enkele minuten duren. Als de Codespace gestart is, dan zie je de webversie van de editor VS Code (spreek uit als: vie-es-kood).
 
-## Code uitvoeren
+### 2. Code uitvoeren
 Bij het starten van de Codespace wordt automatisch een webserver gestart.
 
 Een browser vraagt het `index.html` bestand op bij de webserver, maakt de inhoud op en laat de opgemaakte inhoud zien.
