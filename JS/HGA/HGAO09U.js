@@ -11,6 +11,18 @@ function setup() {
 
 function draw() {
   background(240);
-  fill(60,50,150);
-  ellipse(60,60,diameter);
+
+  // Alle stippen tekenen.
+  for (var n = 0; n < stipX.length; n++) {
+    fill(stipY[n],50,150);
+    ellipse(stipX[n],stipY[n],diameter);
+  }
+
+  // Stip op muispositie toevoegen
+  stipX.unshift(mouseX);
+  stipY.unshift(mouseY);
+
+  // Oudste stip verwijderen
+  stipX.pop();
+  stipY.pop();
 }
