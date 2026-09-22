@@ -8,7 +8,7 @@ class Boom {
   }
   
   groei() {
-    if (this.leeftijd < 20) {
+    if (this.leeftijd < 10) {
       this.leeftijd++;
     }
   }
@@ -26,6 +26,7 @@ class Boom {
 
 // we maken een lege array waar alle objecten in komen te staan
 var bomen = [];
+var aantalNieuweBomen = 2;
 
 function setup() {
   canvas = createCanvas(800,400);
@@ -33,8 +34,13 @@ function setup() {
   noStroke();
   frameRate(1);
   
-  for (var b = 0; b < 10; b++) {
+  for (var b = 0; b < 20; b++) {
     bomen.push(new Boom());
+  }  
+  // random aantal herfstbomen
+  var aantalHerfstBomen = random(bomen.length)
+  for (var n = 0;n < aantalHerfstBomen;n++) {
+    bomen[n].G = 0;
   }
 }
 
@@ -44,7 +50,18 @@ function draw() {
   rect(0,350,canvas.width,canvas.height-350);
   
   for (var n = 0;n < bomen.length;n++) {
-    bomen[n].teken();
-    bomen[n].groei();
+    if (bomen[n].leeftijd < 10) {
+      bomen[n].teken();
+      bomen[n].groei();
+    } else {
+      // console.log("Remove tree #" + n)
+      bomen.splice(n, 1);
+      n--;
+    }
+  }
+
+  // nieuwe bomen planten
+  for (n = 0; n < aantalNieuweBomen; n++) {
+    bomen.push(new Boom());
   }
 }

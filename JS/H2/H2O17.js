@@ -8,7 +8,7 @@ var kever = {
   beweeg() {
     this.x += round(random(-5,5));
     this.y += round(random(-5,5));
-    image(this.sprite,kever.x,kever.y,this.sprite.width / 2,this.sprite.height / 2);
+    image(this.sprite,this.x,this.y,this.sprite.width / 2,this.sprite.height / 2);
   }
 };
 
@@ -35,5 +35,5 @@ function draw() {
   fill('cornsilk');
   rect(0,410,450,40);
   fill('black');
-  text("Het object kever bevindt zich in het punt x = 100 en y = 150",5,435);
+  text("Het object kever bevindt zich in het punt x = " + kever.x + " en y = " + kever.y,5,435);
 }

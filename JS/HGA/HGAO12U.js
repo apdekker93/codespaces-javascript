@@ -39,8 +39,25 @@ var raster = {
     this.aantal++;
   },
   
+  /**
+   * 
+   * @param {number} mx mouse x
+   * @param {number} my mouse y
+   * @param {number} k kolom van de stip
+   * @param {number} r rij van de stip
+   * @returns Of de muis op de stip staat.
+   */
   controleerRaak(mx,my,k,r) {
-    return false;
+    var result = false;
+
+    var mk = floor(mx / this.grootte);
+    var mr = floor(my / this.grootte);
+
+    if (mk == k && mr == r) {
+      result = true;
+    }
+
+    return result;
   },
   
   tekenStip(x,y) {
